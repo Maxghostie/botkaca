@@ -6,7 +6,7 @@
 import os
 
 class Config:
-    def __init__(self, custom = {}, prefix = ''):
+    def __init__(self, custom = {}, prefix = '[MSH]'):
         self.prefix = prefix
         for key in custom:
             self.__setattr__(key,self.__evar(key, custom[key], bool(custom[key] == None)))
